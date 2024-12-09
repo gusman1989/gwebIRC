@@ -3,7 +3,7 @@ import type {ServerToClientEvents, ClientToServerEvents} from "../../shared/type
 
 type Socket = rawSocket<ServerToClientEvents, ClientToServerEvents>;
 
-const socket: Socket = io('https://9000-idx-gwebirc-1733701845032.cluster-7ubberrabzh4qqy2g4z7wgxuw2.cloudworkstations.dev', {
+const socket: Socket = io('https://select-painfully-doe.ngrok-free.app', {
     withCredentials: true,
 	transports: JSON.parse(document.body.dataset.transports || "['polling', 'websocket']"),
 	path: window.location.pathname + "socket.io/",

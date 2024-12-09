@@ -4,7 +4,12 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 run.sh
+.idx
+
+config/
 
 coverage/
 # Local Netlify folder
 .netlify
+dist/
+public/

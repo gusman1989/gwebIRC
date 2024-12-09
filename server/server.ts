@@ -7,6 +7,7 @@ import {Server as ioServer, Socket as ioSocket} from "socket.io";
 import dns from "dns";
 import colors from "chalk";
 import net from "net";
+import cors from "cors"
 
 import log from "./log";
 import Client from "./client";
@@ -88,10 +89,13 @@ export default async function (
 	}
 
 	app.set("env", "production")
+        .use(cors({
+            origin: 'https://chat.gufril.eu.org',
+        }))
 		.disable("x-powered-by")
 		.use(allRequests)
 		.use(addSecurityHeaders)
-		.get("/", indexRequest)
+		// .get("/", indexRequest)
 		.get("/service-worker.js", forceNoCacheRequest)
 		.get("/js/bundle.js.map", forceNoCacheRequest)
 		.get("/css/style.css.map", forceNoCacheRequest)
