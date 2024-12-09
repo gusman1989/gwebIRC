@@ -94,7 +94,7 @@ export default async function (
         }))
 		.disable("x-powered-by")
 		.use(allRequests)
-		.use(addSecurityHeaders)
+		// .use(addSecurityHeaders)
 		// .get("/", indexRequest)
 		.get("/service-worker.js", forceNoCacheRequest)
 		.get("/js/bundle.js.map", forceNoCacheRequest)

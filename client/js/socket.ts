@@ -4,7 +4,6 @@ import type {ServerToClientEvents, ClientToServerEvents} from "../../shared/type
 type Socket = rawSocket<ServerToClientEvents, ClientToServerEvents>;
 
 const socket: Socket = io('https://select-painfully-doe.ngrok-free.app', {
-    withCredentials: true,
 	transports: JSON.parse(document.body.dataset.transports || "['polling', 'websocket']"),
 	path: window.location.pathname + "socket.io/",
 	autoConnect: false,
