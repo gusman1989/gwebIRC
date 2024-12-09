@@ -6,10 +6,12 @@ package-lock.json
 run.sh
 .idx
 
-config/
+config
+test*
 
-coverage/
+coverage
 # Local Netlify folder
 .netlify
-dist/
-public/
+dist
+public
+.vscode
